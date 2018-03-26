@@ -31,7 +31,7 @@ class PostList extends Component {
 
    handleClick = () => {
      this.setState({
-         isOpen: this.state.isOpen + 10 // Чому чей варіан не парацює?
+         isOpen: this.state.isOpen + 10 // Чому чей варіан не парацює? додає постоту =) 
      })
    }
 }
