@@ -6,11 +6,11 @@ import data from '../data'
 
 class PostList extends Component {
    state = {
-      isOpen : data.length
+      isOpen : 10
    }
 
    render() {
-      console.log(data)
+      data.length = this.state.isOpen
       const arr = this.state.isOpen && <ul>
          {data.map(el => <PostListItem
             key={el.id}
@@ -30,8 +30,9 @@ class PostList extends Component {
    }
 
    handleClick = () => {
-      let arr = data;
-      console.log(arr);
+     this.setState({
+         isOpen: this.state.isOpen + 10 // Чому чей варіан не парацює?
+     })
    }
 }
 
