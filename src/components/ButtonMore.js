@@ -4,10 +4,14 @@ console.log(data);
 
 class ButtonMore extends Component {
    render() {
-      console.log(this.props);
          return(
-            <button onClick={this.props.handleClick}>More</button>
+            <button style={{float:'right'}} className='btn btn-primary btn-lg' onClick={this.props.handleClick}>More</button>
          )
+      }
+      handleClick = () => {
+         this.setState({
+            isOpen: this.state.isOpen + 10
+         });
       }
    }
 
