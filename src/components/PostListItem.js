@@ -4,6 +4,7 @@ import PostList from './PostList'
 
 class PostListItem extends Component  {
    render() {
+
       return (
          <li className='card' stype={{margin: '10px'}}>
             <div className='card-header'>
@@ -12,7 +13,7 @@ class PostListItem extends Component  {
             </div>
             <div className='card-body'>
                <div className='card-title'>{this.props.title}</div>
-               <div className=''>{this.props.body}</div>
+               <div>{this.props.body}</div>
             </div>
          </li>
       )
